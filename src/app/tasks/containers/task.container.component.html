@@ -1,0 +1,9 @@
+<!-- 
+    I have used $any() type casting function to prevent typescript from throwing
+    an error regarding type-check while strict type check is configured.
+    It will cast $event object to any type. 
+-->
+<task-edit [errorMessage]="error$ | async" 
+           [taskEst]="taskEstimation$ | async"
+           (updateTask)="updateEstimatedTask($any($event))">
+</task-edit>

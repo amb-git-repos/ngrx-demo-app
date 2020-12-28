@@ -1,0 +1,15 @@
+<form novalidate (ngSubmit)="saveEstimatedHours()"  [formGroup]="taskForm">
+    <div class="mb-3">
+        <label for="front-end-task-hours" class="form-label">Estimated hours to finish front end tasks</label>
+        <input type="number" class="form-control col-md-3 col-lg-3"
+               id="task-hours" name="task-hours"
+               formControlName="taskEstimation"
+               placeholder="Enter Estimated Hours">
+    </div>
+    <div class="">
+        <button class="btn btn-success" type="submit">Save the hours</button>
+      </div>
+      <div class="mt-1" *ngIf="errorMessage">
+        <label class="form-label text-danger">{{errorMessage}}</label>
+      </div>
+</form>
